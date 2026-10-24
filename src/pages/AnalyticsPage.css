@@ -1,0 +1,58 @@
+/* Analytics Page Styles */
+.analytics-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.analytics-header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2, 0.5rem);
+  flex-wrap: wrap;
+}
+
+.analytics-loading-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-12, 3rem) var(--space-4, 1rem);
+  margin-top: var(--space-4, 1rem);
+}
+
+.analytics-error-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-8, 2rem) var(--space-4, 1rem);
+  margin-top: var(--space-4, 1rem);
+}
+
+.analytics-error-icon {
+  font-size: 2.5rem;
+  color: var(--color-danger, #dc3545);
+  margin-bottom: var(--space-3, 0.75rem);
+}
+
+.analytics-error-text {
+  font-size: var(--font-size-md, 1rem);
+  color: var(--color-gray-700, #374151);
+  margin-bottom: var(--space-4, 1rem);
+  max-width: 450px;
+}
+
+@media (max-width: 640px) {
+  .analytics-header-actions {
+    width: 100%;
+    margin-top: var(--space-2, 0.5rem);
+  }
+
+  .analytics-header-actions button {
+    flex: 1;
+    justify-content: center;
+  }
+}

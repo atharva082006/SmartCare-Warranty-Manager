@@ -1,0 +1,169 @@
+.doughnut-chart-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-6, 1.5rem);
+  padding: var(--space-2, 0.5rem) 0;
+  width: 100%;
+}
+
+.doughnut-svg-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.doughnut-svg {
+  transform: rotate(-90deg);
+  overflow: visible;
+}
+
+.doughnut-slice {
+  cursor: pointer;
+  transition: stroke-width 0.15s ease, opacity 0.15s ease;
+}
+
+.doughnut-slice:focus-visible {
+  outline: none;
+}
+
+.slice-hovered {
+  opacity: 0.95;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+}
+
+.doughnut-center-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  pointer-events: none;
+}
+
+.doughnut-center-value {
+  font-size: var(--font-size-2xl, 1.5rem);
+  font-weight: var(--font-weight-bold, 700);
+  color: var(--color-gray-900, #111827);
+  line-height: 1.1;
+}
+
+.doughnut-center-label {
+  font-size: var(--font-size-xs, 0.75rem);
+  color: var(--color-gray-500, #6b7280);
+  font-weight: var(--font-weight-medium, 500);
+  max-width: 90px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 2px;
+}
+
+.doughnut-center-pct {
+  font-size: var(--font-size-xs, 0.75rem);
+  font-weight: var(--font-weight-semibold, 600);
+  color: var(--color-primary, #007bff);
+}
+
+.doughnut-legend {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2, 0.5rem);
+  flex: 1;
+  min-width: 140px;
+}
+
+.doughnut-legend-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2, 0.5rem);
+  padding: var(--space-1, 0.25rem) var(--space-2, 0.5rem);
+  border-radius: var(--radius-sm, 4px);
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.doughnut-legend-item:hover,
+.legend-item-active {
+  background-color: var(--color-gray-50, #f9fafb);
+}
+
+.legend-indicator {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2, 0.5rem);
+  min-width: 0;
+}
+
+.legend-color-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full, 9999px);
+  flex-shrink: 0;
+}
+
+.legend-label {
+  font-size: var(--font-size-sm, 0.875rem);
+  color: var(--color-gray-700, #374151);
+  font-weight: var(--font-weight-medium, 500);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.legend-values {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.legend-count {
+  font-size: var(--font-size-sm, 0.875rem);
+  font-weight: var(--font-weight-bold, 700);
+  color: var(--color-gray-900, #111827);
+}
+
+.legend-percent {
+  font-size: var(--font-size-xs, 0.75rem);
+  color: var(--color-gray-500, #6b7280);
+}
+
+.doughnut-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6, 1.5rem);
+  text-align: center;
+}
+
+.doughnut-empty-ring {
+  border: 12px dashed var(--color-gray-200, #e5e7eb);
+  border-radius: 50%;
+  margin-bottom: var(--space-3, 0.75rem);
+}
+
+.doughnut-empty-text {
+  font-size: var(--font-size-sm, 0.875rem);
+  color: var(--color-gray-500, #6b7280);
+}
+
+@media (max-width: 640px) {
+  .doughnut-chart-container {
+    flex-direction: column;
+    gap: var(--space-4, 1rem);
+  }
+
+  .doughnut-legend {
+    width: 100%;
+  }
+}

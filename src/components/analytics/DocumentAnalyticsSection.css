@@ -1,0 +1,106 @@
+/* Document Analytics Section Styles */
+.doc-analytics-card {
+  margin-bottom: var(--space-6, 1.5rem);
+}
+
+.doc-card-actions {
+  display: flex;
+  gap: var(--space-2, 0.5rem);
+}
+
+.doc-analytics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6, 1.5rem);
+  align-items: center;
+}
+
+.doc-metrics-strip {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3, 0.75rem);
+}
+
+.doc-mini-kpi {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3, 0.75rem);
+  padding: var(--space-3, 0.75rem);
+  border: 1px solid var(--color-gray-200, #e5e7eb);
+  border-radius: var(--radius-md, 8px);
+  background-color: var(--color-gray-50, #f9fafb);
+}
+
+.mini-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm, 4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.icon-vault {
+  background-color: #e0f2fe;
+  color: #0284c7;
+}
+
+.icon-ocr-done {
+  background-color: var(--color-success-light, #e8f5e9);
+  color: var(--color-success, #28a745);
+}
+
+.icon-ocr-pend {
+  background-color: var(--color-warning-light, #fff8e1);
+  color: #b78103;
+}
+
+.icon-warr-doc {
+  background-color: var(--color-primary-light, #e8f0fe);
+  color: var(--color-primary, #007bff);
+}
+
+.mini-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.mini-label {
+  font-size: 0.7rem;
+  color: var(--color-gray-500, #6b7280);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.mini-val {
+  font-size: 1.15rem;
+  font-weight: var(--font-weight-bold, 700);
+  color: var(--color-gray-900, #111827);
+  line-height: 1.2;
+}
+
+.mini-hint {
+  font-size: 0.68rem;
+  color: var(--color-gray-500, #6b7280);
+}
+
+.doc-chart-wrapper {
+  border: 1px solid var(--color-gray-200, #e5e7eb);
+  border-radius: var(--radius-md, 8px);
+  padding: var(--space-3, 0.75rem);
+  background-color: var(--color-white, #ffffff);
+}
+
+@media (max-width: 900px) {
+  .doc-analytics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 540px) {
+  .doc-metrics-strip {
+    grid-template-columns: 1fr;
+  }
+}

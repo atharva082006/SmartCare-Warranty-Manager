@@ -1,0 +1,94 @@
+/* ============================================
+   Select Component Styles
+   ============================================ */
+
+.select-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs, 4px);
+  margin-bottom: var(--space-md, 16px);
+  text-align: left;
+  width: 100%;
+}
+
+.select-label {
+  font-size: var(--font-size-sm, 0.875rem);
+  font-weight: var(--font-weight-medium, 500);
+  color: var(--color-gray-800, #343a40);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.select-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.select-control {
+  width: 100%;
+  padding: 10px 36px 10px 14px;
+  font-size: var(--font-size-sm, 0.875rem);
+  color: var(--color-gray-900, #212529);
+  background-color: var(--color-white, #ffffff);
+  border: 1px solid var(--border-color, #dee2e6);
+  border-radius: var(--radius-md, 8px);
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  transition: border-color var(--transition-fast, 150ms ease), box-shadow var(--transition-fast, 150ms ease);
+}
+
+.select-control:focus {
+  outline: none;
+  border-color: var(--color-primary, #007bff);
+  box-shadow: 0 0 0 3px var(--color-primary-light, #e8f0fe);
+}
+
+.select-control:disabled {
+  background-color: var(--color-gray-100, #f8f9fa);
+  color: var(--color-gray-500, #adb5bd);
+  cursor: not-allowed;
+}
+
+.select-chevron {
+  position: absolute;
+  right: 12px;
+  color: var(--color-gray-500, #adb5bd);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+/* Error state */
+.has-error .select-control {
+  border-color: var(--color-danger, #dc3545);
+}
+
+.has-error .select-control:focus {
+  border-color: var(--color-danger, #dc3545);
+  box-shadow: 0 0 0 3px var(--color-danger-light, #fdecea);
+}
+
+.select-error-msg {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font-size-xs, 0.75rem);
+  color: var(--color-danger, #dc3545);
+  margin-top: 4px;
+}
+
+.select-error-msg .error-icon {
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.select-helper-msg {
+  font-size: var(--font-size-xs, 0.75rem);
+  color: var(--color-gray-500, #adb5bd);
+  margin-top: 4px;
+}

@@ -1,0 +1,627 @@
+.product-detail-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  width: 100%;
+}
+
+.detail-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-500);
+  margin-bottom: var(--space-2);
+}
+
+.breadcrumb-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--color-primary-600);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.breadcrumb-link:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-separator {
+  color: var(--color-neutral-400);
+}
+
+.breadcrumb-current {
+  color: var(--color-neutral-700);
+  font-weight: 500;
+  max-width: 320px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.detail-header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* Detail Grid Layout */
+.detail-layout-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: var(--space-5);
+  align-items: start;
+}
+
+.detail-col-main,
+.detail-col-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.detail-card {
+  padding: var(--space-4);
+}
+
+/* Info Grid */
+.detail-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.info-label {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-neutral-400);
+}
+
+.info-val {
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-800);
+}
+
+.info-val.bold {
+  font-weight: 600;
+  color: var(--color-neutral-900);
+}
+
+.code-font {
+  font-family: monospace;
+  background-color: var(--color-neutral-50);
+  padding: 1px 4px;
+  border-radius: var(--radius-sm);
+  display: inline-block;
+  width: fit-content;
+}
+
+.price-text {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-primary-700);
+}
+
+.detail-notes-section {
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-neutral-100);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.notes-content {
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-700);
+  line-height: 1.5;
+  background-color: var(--color-neutral-50);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  margin: 0;
+}
+
+/* Health Score Hero */
+.health-score-hero {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-neutral-100);
+}
+
+.health-gauge-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--color-primary-50) 0%, #ecfdf5 100%);
+  border: 3px solid var(--color-primary-500);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.gauge-number {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--color-neutral-900);
+  line-height: 1;
+}
+
+.gauge-total {
+  font-size: 0.7rem;
+  color: var(--color-neutral-500);
+}
+
+.health-hero-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.health-status-badge-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.health-status-hint {
+  font-size: var(--font-size-xs);
+  color: var(--color-neutral-600);
+}
+
+.health-meter-bar {
+  width: 100%;
+  height: 8px;
+  background-color: var(--color-neutral-200);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.health-meter-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 0.5s ease;
+}
+
+/* Deductions Breakdown */
+.deductions-breakdown-wrapper {
+  margin-top: var(--space-4);
+}
+
+.breakdown-title {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-neutral-800);
+  margin-bottom: 2px;
+}
+
+.breakdown-subtitle {
+  font-size: var(--font-size-xs);
+  color: var(--color-neutral-500);
+  margin-bottom: var(--space-3);
+}
+
+.deduction-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.deduction-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2) var(--space-3);
+  background-color: #fff7ed;
+  border-left: 3px solid #f97316;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+}
+
+.deduction-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.deduction-factor {
+  font-weight: 600;
+  color: #9a3412;
+}
+
+.deduction-desc {
+  color: #7c2d12;
+}
+
+.deduction-points {
+  font-weight: 700;
+  color: var(--color-danger-600);
+  font-size: var(--font-size-sm);
+}
+
+.zero-deductions-banner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  background-color: var(--color-success-50);
+  border-radius: var(--radius-md);
+  color: var(--color-success-700);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
+.zero-deductions-icon {
+  font-size: 1.25rem;
+  color: var(--color-success-600);
+}
+
+/* Service Records Table */
+.service-records-table-wrapper {
+  overflow-x: auto;
+}
+
+.service-records-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-xs);
+  text-align: left;
+}
+
+.service-records-table th {
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--color-neutral-50);
+  color: var(--color-neutral-500);
+  font-weight: 600;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--color-neutral-200);
+}
+
+.service-records-table td {
+  padding: var(--space-3);
+  border-bottom: 1px solid var(--color-neutral-100);
+  color: var(--color-neutral-700);
+}
+
+.srv-type-text {
+  color: var(--color-neutral-900);
+}
+
+.srv-cost-cell {
+  font-weight: 600;
+  color: var(--color-neutral-900);
+}
+
+/* Warranty Details */
+.warranty-detail-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.warranty-status-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.warranty-provider-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.warranty-plan-name {
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-900);
+}
+
+.warranty-provider-name {
+  font-size: var(--font-size-xs);
+  color: var(--color-neutral-500);
+}
+
+.warranty-dates-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-neutral-50);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+}
+
+.date-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.date-label {
+  font-size: 0.7rem;
+  color: var(--color-neutral-400);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.date-val {
+  font-size: var(--font-size-xs);
+  color: var(--color-neutral-800);
+}
+
+.date-val.bold {
+  font-weight: 600;
+  color: var(--color-neutral-900);
+}
+
+.date-divider {
+  color: var(--color-neutral-400);
+  font-weight: bold;
+}
+
+.warranty-timing-alert {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-xs);
+  color: var(--color-neutral-600);
+  background-color: #f8fafc;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+}
+
+.clock-icon {
+  color: var(--color-primary-600);
+}
+
+.warranty-coverage-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.coverage-text {
+  font-size: var(--font-size-xs);
+  color: var(--color-neutral-600);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.warranty-support-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-xs);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--color-neutral-100);
+}
+
+.phone-icon {
+  color: var(--color-success-600);
+}
+
+.support-label {
+  color: var(--color-neutral-500);
+}
+
+.support-link {
+  color: var(--color-primary-600);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.support-link:hover {
+  text-decoration: underline;
+}
+
+/* Documents List */
+.docs-list-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.doc-item-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-neutral-100);
+}
+
+.doc-item-row:last-child {
+  border-bottom: none;
+}
+
+.doc-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: var(--color-primary-50);
+  color: var(--color-primary-600);
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.doc-info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+  flex: 1;
+}
+
+.doc-name-text {
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  color: var(--color-neutral-800);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.doc-meta-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.7rem;
+  color: var(--color-neutral-400);
+}
+
+/* Recommendations */
+.recs-list-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.rec-item {
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.rec-item.rec-high {
+  background-color: #fef2f2;
+  border-left: 3px solid #ef4444;
+}
+
+.rec-item.rec-medium {
+  background-color: #fffbeb;
+  border-left: 3px solid #f59e0b;
+}
+
+.rec-item.rec-low {
+  background-color: #f0fdf4;
+  border-left: 3px solid #22c55e;
+}
+
+.rec-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.rec-icon {
+  font-size: 1rem;
+}
+
+.rec-item.rec-high .rec-icon {
+  color: #ef4444;
+}
+
+.rec-item.rec-medium .rec-icon {
+  color: #f59e0b;
+}
+
+.rec-item.rec-low .rec-icon {
+  color: #22c55e;
+}
+
+.rec-title {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--color-neutral-900);
+}
+
+.rec-msg {
+  font-size: var(--font-size-xs);
+  color: var(--color-neutral-600);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.rec-action-hint {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--color-primary-600);
+}
+
+/* Quick Actions List */
+.quick-actions-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+/* Empty Sub-Card */
+.empty-sub-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  color: var(--color-neutral-400);
+  font-size: var(--font-size-xs);
+  text-align: center;
+  gap: var(--space-2);
+}
+
+.empty-sub-icon {
+  font-size: 1.5rem;
+}
+
+/* Error and Loading States */
+.detail-loading-card,
+.detail-error-card {
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: var(--space-3);
+}
+
+.detail-error-icon {
+  font-size: 2.5rem;
+  color: var(--color-danger-500);
+}
+
+.detail-error-actions {
+  margin-top: var(--space-4);
+}
+
+@media (max-width: 992px) {
+  .detail-layout-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .detail-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .health-score-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .detail-header-actions {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .detail-header-actions button {
+    flex: 1;
+  }
+}

@@ -1,0 +1,93 @@
+.document-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.document-kpi-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.document-kpi-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.kpi-card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.kpi-label {
+  font-size: var(--font-sm);
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-1);
+}
+
+.kpi-value {
+  font-size: var(--font-2xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.kpi-subtext {
+  font-size: var(--font-xs);
+  color: var(--text-muted);
+  margin-top: var(--space-1);
+}
+
+.kpi-icon-container {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+/* Colors matching SmartCare design tokens */
+.color-blue .kpi-icon-container {
+  background: var(--primary-50);
+  color: var(--primary-600);
+}
+
+.color-green .kpi-icon-container {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.color-orange .kpi-icon-container {
+  background: #fff7ed;
+  color: #ea580c;
+}
+
+.color-purple .kpi-icon-container {
+  background: #f5f3ff;
+  color: #7c3aed;
+}
+
+@media (max-width: 1024px) {
+  .document-kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .document-kpi-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+}

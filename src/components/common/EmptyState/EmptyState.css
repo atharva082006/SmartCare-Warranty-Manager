@@ -1,0 +1,50 @@
+/* ============================================
+   EmptyState Styles
+   ============================================ */
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-2xl, 48px) var(--space-lg, 24px);
+  background-color: var(--color-white, #ffffff);
+  border: 1px dashed var(--border-color, #dee2e6);
+  border-radius: var(--radius-lg, 12px);
+  margin: var(--space-md, 16px) 0;
+}
+
+.empty-state-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-full, 9999px);
+  background-color: var(--color-gray-100, #f1f3f5);
+  color: var(--color-gray-500, #adb5bd);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  margin-bottom: var(--space-md, 16px);
+}
+
+.empty-state-title {
+  margin: 0 0 var(--space-xs, 4px) 0;
+  font-size: var(--font-size-lg, 1.125rem);
+  font-weight: var(--font-weight-semibold, 600);
+  color: var(--color-gray-900, #212529);
+}
+
+.empty-state-description {
+  margin: 0 0 var(--space-lg, 24px) 0;
+  font-size: var(--font-size-sm, 0.875rem);
+  color: var(--color-gray-600, #868e96);
+  max-width: 440px;
+  line-height: var(--line-height-normal, 1.5);
+}
+
+.empty-state-action {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm, 8px);
+}

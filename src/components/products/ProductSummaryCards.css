@@ -1,0 +1,112 @@
+.product-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.product-summary-card {
+  padding: var(--space-4);
+}
+
+.summary-card-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.summary-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-lg);
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.summary-icon-box.icon-primary {
+  background-color: var(--color-primary-50);
+  color: var(--color-primary-600);
+}
+
+.summary-icon-box.icon-success {
+  background-color: var(--color-success-50);
+  color: var(--color-success-600);
+}
+
+.summary-icon-box.icon-warning {
+  background-color: var(--color-warning-50);
+  color: var(--color-warning-600);
+}
+
+.summary-icon-box.icon-info {
+  background-color: #f0fdf4;
+  color: #15803d;
+}
+
+.summary-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+  flex: 1;
+}
+
+.summary-label {
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  color: var(--color-neutral-500);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.summary-val-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.summary-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-neutral-900);
+  line-height: 1.2;
+}
+
+.summary-subtext {
+  font-size: var(--font-size-xs);
+  color: var(--color-neutral-400);
+}
+
+.summary-skeleton-content {
+  height: 64px;
+  background: linear-gradient(90deg, var(--color-neutral-100) 25%, var(--color-neutral-200) 50%, var(--color-neutral-100) 75%);
+  background-size: 200% 100%;
+  animation: skeletonShimmer 1.5s infinite;
+  border-radius: var(--radius-md);
+}
+
+@keyframes skeletonShimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .product-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .product-summary-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+}

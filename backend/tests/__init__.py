@@ -1,0 +1,3 @@
+"""
+SmartCare Backend Test Package.
+"""

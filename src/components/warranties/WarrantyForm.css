@@ -1,0 +1,60 @@
+.warranty-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.warranty-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.form-col-span-2 {
+  grid-column: span 2;
+}
+
+.warranty-form-notes {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.warranty-textarea {
+  width: 100%;
+  padding: 0.625rem 0.875rem;
+  border: 1px solid var(--color-neutral-300);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-family: inherit;
+  color: var(--color-neutral-900);
+  background-color: var(--color-surface);
+  resize: vertical;
+  outline: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.warranty-textarea:focus {
+  border-color: var(--color-primary-500);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.warranty-form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-neutral-100);
+  margin-top: var(--space-2);
+}
+
+@media (max-width: 640px) {
+  .warranty-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-col-span-2 {
+    grid-column: span 1;
+  }
+}
